@@ -1,0 +1,64 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - help
+  - mood_great
+  - mood_unhappy
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_services
+  - provide_url
+  - create_agent
+  - list_agents
+  - update_details
+
+slots:
+  service:
+    type: text
+    mappings:
+      - type: from_text
+        intent: ask_services
+  url:
+    type: text
+    mappings:
+      - type: from_text
+        intent: provide_url
+  agent_name:
+    type: text
+    mappings:
+      - type: from_text
+        intent: create_agent
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today?"
+  utter_goodbye:
+    - text: "Goodbye! Have a great day ahead!"
+  utter_help:
+    - text: "I can help you with creating, listing, or updating agents. How can I assist you?"
+  utter_ask_services:
+    - text: "We offer a variety of services such as agent management. What would you like to know more about?"
+  utter_create_agent:
+    - text: "Sure! I can help you create a new agent. What name would you like to give your agent?"
+  utter_list_agents:
+    - text: "Here are the available agents: Agent 1, Agent 2, Agent 3."
+  utter_update_details:
+    - text: "What details would you like to update for your agent?"
+  utter_bot_challenge:
+    - text: "I am a bot, powered by Rasa."
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_help
+  - utter_ask_services
+  - utter_create_agent
+  - utter_list_agents
+  - utter_update_details
+  - utter_bot_challenge
+  - action_create_agent
+  - action_list_agents
+  - action_update_agent_details
