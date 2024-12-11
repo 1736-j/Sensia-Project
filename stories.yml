@@ -1,0 +1,43 @@
+version: "3.1"
+
+stories:
+  - story: greet and ask about services
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_services
+      - action: utter_ask_services
+
+  - story: goodbye conversation
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: user asks for help
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - story: user creates a new agent
+    steps:
+      - intent: create_agent
+      - action: utter_create_agent
+      - intent: inform
+      - action: action_create_agent
+
+  - story: user lists agents
+    steps:
+      - intent: list_agents
+      - action: utter_list_agents
+
+  - story: user updates agent details
+    steps:
+      - intent: update_details
+      - action: utter_update_details
+      - intent: inform
+      - action: action_update_agent_details
+
+  - story: bot challenge
+    steps:
+      - intent: bot_challenge
+      - action: utter_bot_challenge

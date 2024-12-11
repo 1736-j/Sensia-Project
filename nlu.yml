@@ -1,0 +1,89 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: help
+    examples: |
+      - I need help
+      - Can you assist me?
+      - Help me
+      - Please help
+      - I need assistance
+      - Can you help with agents?
+
+  - intent: ask_services
+    examples: |
+      - I want to know about your services
+      - What services do you provide?
+      - Tell me about your services
+      - Describe your services
+      - What can you do?
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - see you later
+      - have a nice day
+      - goodbye
+      - see you around
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - don't like that
+
+  - intent: create_agent
+    examples: |
+      - Create a new agent
+      - I want to add an assistant
+      - Can you create an assistant for me?
+      - Add a new agent
+      - Help me create an agent
+
+  - intent: list_agents
+    examples: |
+      - List all agents
+      - Show me the agents
+      - What agents do you have?
+      - Who are the available agents?
+
+  - intent: update_details
+    examples: |
+      - Update my details
+      - Can I update my agent's details?
+      - Change agent info
+      - Modify agent details
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?

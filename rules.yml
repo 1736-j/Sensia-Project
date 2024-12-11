@@ -1,0 +1,32 @@
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: User asks for help
+    steps:
+      - intent: help
+      - action: utter_help
+
+  - rule: User creates a new agent
+    steps:
+      - intent: create_agent
+      - action: utter_create_agent
+
+  - rule: User lists all agents
+    steps:
+      - intent: list_agents
+      - action: utter_list_agents
+
+  - rule: User updates agent details
+    steps:
+      - intent: update_details
+      - action: utter_update_details
+
+  - rule: Bot challenge response
+    steps:
+      - intent: bot_challenge
+      - action: utter_bot_challenge
